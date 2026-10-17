@@ -1,0 +1,12 @@
+CREATE TABLE job_applications (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    company_name VARCHAR(200) NOT NULL,
+    job_title VARCHAR(200) NOT NULL,
+    status VARCHAR(30) NOT NULL,
+    remark TEXT,
+    created_at	TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at	TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    applied_at	TIMESTAMP WITH TIME ZONE,
+    application_source	VARCHAR(100),
+    application_method VARCHAR(100)
+);
